@@ -187,6 +187,35 @@ ul.right-menu li a {
   color: #333;
 }
 
+#Showcase {
+  height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#Showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+#Showcase p {
+  font-size: 2rem;
+}
+
 .showcase {
   width: 100%;
   height: 400px;
@@ -303,6 +332,12 @@ ul.right-menu li a {
           flex-direction: row;
 }
 
+@media screen and (max-width: 980px) {
+  .home-message {
+    height: 300px;
+  }
+}
+
 .home-message .greeting {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -324,7 +359,7 @@ ul.right-menu li a {
 
 @media screen and (max-width: 980px) {
   .home-message .greeting {
-    padding: 0;
+    padding: 20px 0px 0px;
     font-size: .8rem;
   }
 }
@@ -365,6 +400,10 @@ ul.right-menu li a {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 5px;
+}
+
+.home-cards div {
+  margin: 0 20px;
 }
 
 .home-cards div a {
@@ -424,6 +463,7 @@ ul.right-menu li a {
   width: 100%;
   height: 20rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(255, 0, 0, 0.45))), url("../img/img_home_footer.jpg") no-repeat center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(255, 0, 0, 0.45)), url("../img/img_home_footer.jpg") no-repeat center center/cover;
   display: -webkit-box;
@@ -437,6 +477,7 @@ ul.right-menu li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 15rem;
   }
 }
 
@@ -860,4 +901,62 @@ ul.right-menu li a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
+}
+
+.container-marcell {
+  height: 100%;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*
+  fixed = parallax
+  scroll = normal
+*/
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../img/img-marcell-bg1.jpg");
+  min-height: 600px;
+}
+
+.pimg2 {
+  background-image: url("../img/img-marcell-bg2.jpg");
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url("../img/img-marcell-bg3.jpg");
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
